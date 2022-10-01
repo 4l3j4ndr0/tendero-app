@@ -1,7 +1,7 @@
 import a from "axios";
 const axios = a.create({
-  baseURL: "http://127.0.0.1:8000/",
-  // baseURL: process.env.VUE_APP_API_URL,
+  // baseURL: "http://127.0.0.1:8000/",
+  baseURL: process.env.VUE_APP_API_URL,
 });
 import { useUserStore } from "../stores/User";
 export default function () {

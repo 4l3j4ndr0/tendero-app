@@ -1,5 +1,8 @@
 import { RouteRecordRaw } from "vue-router";
 import CustomerPage from "../pages/Customers/Index.vue";
+import CustomerCreate from "../pages/Customers/Create.vue";
+import CustomerEdit from "../pages/Customers/Edit.vue";
+import ProvidersPage from "../pages/Providers/Index.vue";
 const routes: RouteRecordRaw[] = [
   {
     path: "/login",
@@ -19,35 +22,35 @@ const routes: RouteRecordRaw[] = [
       },
       {
         path: "/customers/create",
-        component: import("pages/Customers/Create.vue"),
+        component: CustomerCreate,
       },
       {
         path: "/customers/edit/:id",
-        component: import("pages/Customers/Edit.vue"),
+        component: CustomerEdit,
       },
       {
         path: "/providers",
-        component: import("pages/Providers/Index.vue"),
+        component: ProvidersPage,
       },
       {
         path: "/providers/create",
-        component: import("pages/Providers/Create.vue"),
+        component: () => import("pages/Providers/Create.vue"),
       },
       {
         path: "/providers/edit/:id",
-        component: import("pages/Providers/Edit.vue"),
+        component: () => import("pages/Providers/Edit.vue"),
       },
       {
         path: "/products",
-        component: import("pages/Products/Index.vue"),
+        component: () => import("pages/Products/Index.vue"),
       },
       {
         path: "/products/create",
-        component: import("pages/Products/Create.vue"),
+        component: () => import("pages/Products/Create.vue"),
       },
       {
         path: "/products/edit/:id",
-        component: import("pages/Products/Edit.vue"),
+        component: () => import("pages/Products/Edit.vue"),
       },
     ],
   },
